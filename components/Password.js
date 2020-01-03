@@ -15,7 +15,7 @@ class Password extends Component {
             <View>
                 <View style={styles.Container}>
                     <TouchableOpacity style={styles.Button} onPress={this.toggleModal}>
-                        <Text style={styles.Title}>Password</Text>
+                        <Text style={styles.Title}>{this.props.account}</Text>
                     </TouchableOpacity>
                 </View>
 
@@ -30,9 +30,9 @@ class Password extends Component {
                 animationOut='fadeOut'
                 >
                     <View style={styles.Modal}>
-                        <Text style={{textAlign: 'center', fontSize: 32, fontWeight: 'bold', }}>Password</Text>
-                        <Text style={styles.ModalText}>Username: </Text>
-                        <Text style={styles.ModalText}>Password: </Text>
+                        <Text style={{textAlign: 'center', fontSize: 32, fontWeight: 'bold', }}>{this.props.account}</Text>
+                        <Text style={styles.ModalText}>Username: {this.props.username}</Text>
+                        <Text style={styles.ModalText}>Password: {this.props.password}</Text>
                     </View>
                 </Modal>
             </View>
